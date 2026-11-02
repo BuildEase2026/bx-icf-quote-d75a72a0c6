@@ -1,0 +1,170 @@
+{
+ "portal": "BuildEase ICF Project Environment",
+ "project": {
+  "client": "Ethos Property Developments (Nudura distributor) - Mark Whalley",
+  "job": "Basement extension, Badgers Hollow, Alderley Edge",
+  "number_prefix": "ES26-088",
+  "status": "QUOTATION",
+  "revision": "",
+  "model_title": "ES26-088 Basement extension, Badgers Hollow, Alderley Edge - Quotation"
+ },
+ "default_view": "stage-1",
+ "views": [
+  {
+   "id": "stage-1",
+   "kind": "stage",
+   "n": 1,
+   "title": "Basement extension walls",
+   "desc": "The extension raft (by others) and the 7-course extension walls: the 450 wall (457 core, unassembled XR35 panels) running to both outer corners and the two 200 Standard walls with 8in corners and the corbel top course.",
+   "focus": false
+  },
+  {
+   "id": "elev-N",
+   "kind": "elevation",
+   "n": 1,
+   "title": "North elevation",
+   "dir": [
+    0.0,
+    0.12,
+    -1.0
+   ],
+   "desc": "Complete structure seen from the north."
+  },
+  {
+   "id": "elev-S",
+   "kind": "elevation",
+   "n": 1,
+   "title": "South elevation",
+   "dir": [
+    0.0,
+    0.12,
+    1.0
+   ],
+   "desc": "Complete structure seen from the south."
+  },
+  {
+   "id": "elev-E",
+   "kind": "elevation",
+   "n": 1,
+   "title": "East elevation",
+   "dir": [
+    1.0,
+    0.12,
+    0.0
+   ],
+   "desc": "Complete structure seen from the east."
+  },
+  {
+   "id": "elev-W",
+   "kind": "elevation",
+   "n": 1,
+   "title": "West elevation",
+   "dir": [
+    -1.0,
+    0.12,
+    0.0
+   ],
+   "desc": "Complete structure seen from the west."
+  }
+ ],
+ "stages": [
+  {
+   "n": 1,
+   "title": "Basement extension walls",
+   "desc": "The extension raft (by others) and the 7-course extension walls: the 450 wall (457 core, unassembled XR35 panels) running to both outer corners and the two 200 Standard walls with 8in corners and the corbel top course.",
+   "files": [
+    {
+     "glb": "stage-1.glb",
+     "part": null,
+     "label": null,
+     "bytes": 540704
+    }
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "quote",
+   "title": "Quotation",
+   "note": "The Distributor Bill of Materials for the basement extension (stock forms + 5 % waste, every form and accessory with a blank rate card for your own sale prices - no material prices from us).",
+   "zip": {
+    "file": "downloads/ES26-088 Quotation.zip",
+    "bytes": 64413,
+    "count": 1
+   },
+   "docs": [
+    {
+     "id": "ES26-088-QS-01",
+     "title": "Distributor BOM - Basement Extension",
+     "file": "docs/quote/ES26-088-QS-01 Distributor BOM - Basement Extension.pdf",
+     "pages": 8,
+     "thumb": "thumbs/ES26-088-QS-01.png",
+     "bytes": 138688,
+     "number": "ES26-088-QS-01",
+     "view": "stage-1",
+     "view_opts": {}
+    }
+   ],
+   "downloads": [
+    {
+     "file": "downloads/ES26-088 Distributor BOM - Basement Extension.xlsx",
+     "title": "Distributor BOM - basement extension (Excel - enter your rates in the yellow cells) (0.0 MB)"
+    }
+   ]
+  },
+  {
+   "id": "icf",
+   "title": "ICF drawings",
+   "note": "The ICF general arrangement and the wall elevations.",
+   "zip": {
+    "file": "downloads/ES26-088 ICF drawings.zip",
+    "bytes": 135480,
+    "count": 3
+   },
+   "docs": [
+    {
+     "id": "ES26-088-GA-01",
+     "title": "Basement Extension ICF General Arrangement",
+     "file": "docs/icf/ES26-088-GA-01 Basement Extension ICF General Arrangement.pdf",
+     "pages": 1,
+     "thumb": "thumbs/ES26-088-GA-01.png",
+     "bytes": 54502,
+     "number": "ES26-088-GA-01",
+     "view": "stage-1",
+     "view_opts": {}
+    },
+    {
+     "id": "ES26-088-EL-01",
+     "title": "Basement Extension Front and Rear Elevations",
+     "file": "docs/icf/ES26-088-EL-01 Basement Extension Front and Rear Elevations.pdf",
+     "pages": 1,
+     "thumb": "thumbs/ES26-088-EL-01.png",
+     "bytes": 57351,
+     "number": "ES26-088-EL-01",
+     "view": "elev-N",
+     "view_opts": {}
+    },
+    {
+     "id": "ES26-088-EL-02",
+     "title": "Basement Extension Side Elevations",
+     "file": "docs/icf/ES26-088-EL-02 Basement Extension Side Elevations.pdf",
+     "pages": 1,
+     "thumb": "thumbs/ES26-088-EL-02.png",
+     "bytes": 57671,
+     "number": "ES26-088-EL-02",
+     "view": "elev-E",
+     "view_opts": {}
+    }
+   ]
+  }
+ ],
+ "focus": null,
+ "isolate_stages": false,
+ "toggles": [],
+ "download_all": {
+  "file": "downloads/ES26-088 Basement extension, Badgers Hollow, Alderley Edge - Quotation.zip",
+  "bytes": 210563,
+  "count": 5,
+  "title": "Download everything"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "job": "Basement extension, Badgers Hollow, Alderley Edge",
+ "revision": "",
+ "stages": [
+  {
+   "n": 1,
+   "title": "Basement extension walls",
+   "desc": "The extension raft (by others) and the 7-course extension walls: the 450 wall (457 core, unassembled XR35 panels) running to both outer corners and the two 200 Standard walls with 8in corners and the corbel top course.",
+   "files": [
+    {
+     "glb": "stage-1.glb",
+     "part": null,
+     "label": null,
+     "bytes": 540704
+    }
+   ]
+  }
+ ]
+}
