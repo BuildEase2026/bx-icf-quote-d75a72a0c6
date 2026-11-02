@@ -95,14 +95,16 @@
    "docs": [
     {
      "id": "ES26-088-QS-01",
-     "title": "Distributor BOM - Basement Extension",
-     "file": "docs/quote/ES26-088-QS-01 Distributor BOM - Basement Extension.pdf",
-     "pages": 8,
+     "title": "Distributor BOM - Nudura ICF kit with your rate card (Excel)",
+     "file": "downloads/ES26-088 Distributor BOM - Basement Extension.xlsx",
+     "pages": 4,
      "thumb": "thumbs/ES26-088-QS-01.png",
      "bytes": 138688,
      "number": "ES26-088-QS-01",
-     "view": "stage-1",
-     "view_opts": {}
+     "kind": "xlsx",
+     "preview": "xls/bom.html",
+     "tabs": 4,
+     "subtitle": "Excel workbook - live preview, enter your sale rates"
     }
    ],
    "downloads": [

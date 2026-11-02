@@ -180,6 +180,7 @@
       <a class="tb" id="cad" download style="display:none">CAD (DWG + DXF)</a>
     </div>
     <div id="pdfwrap"><div id="pdfpad"><canvas id="pdfcanvas"></canvas></div><div id="docmsg"></div></div>
+    <iframe id="xlsframe" title="Spreadsheet preview" hidden style="flex:1;min-height:0;width:100%;border:0;background:#fff"></iframe>
   </section>
   <section class="page" id="v3d" hidden>
     <div id="v3dhead"><h3 id="v3dtitle"></h3><p id="v3ddesc"></p></div>
@@ -243,7 +244,7 @@ addEventListener("hashchange", route);
 
 // ------------------------------------------------------------------ home + groups
 function docCard(g, d) {
-  const meta = [d.subtitle, `${d.pages} page${d.pages === 1 ? "" : "s"}`].filter(Boolean).join(" · ");
+  const meta = [d.subtitle, d.kind === "xlsx" ? `${d.tabs} tabs` : `${d.pages} page${d.pages === 1 ? "" : "s"}`].filter(Boolean).join(" · ");
   const cad = d.cad ? `<a class="cad" href="${esc(d.cad.file)}" download>&#8681; CAD (DWG + DXF, ${mb(d.cad.bytes)})</a>` : "";
   return `<div class="docw"><a class="doc" href="#/doc/${g.id}/${encodeURIComponent(d.id)}">
     <img loading="lazy" src="${esc(d.thumb)}" alt="">
@@ -316,6 +317,16 @@ async function openDoc(gid, did, page) {
     const qs = new URLSearchParams(Object.entries(d.view_opts || {}).map(([k, x]) => [k, x ? 1 : 0])).toString();
     $("open3d").href = `#/3d/${v.id}${qs ? "?" + qs : ""}`;
   }
+  const xls = d.kind === "xlsx" && d.preview;
+  doc.xls = !!xls;
+  $("pdfwrap").hidden = !!xls; $("xlsframe").hidden = !xls;
+  for (const el of document.querySelectorAll("#docbar .tbgroup")) el.hidden = !!xls;
+  $("download").textContent = xls ? "Download Excel" : "Download";
+  if (xls) {
+    $("panelsel").hidden = true;
+    if ($("xlsframe").getAttribute("src") !== d.preview) $("xlsframe").src = d.preview;
+    doc.g = g; doc.d = d; return;
+  }
   const same = doc.d === d;
   doc.g = g; doc.d = d;
   if (!same) {
@@ -379,7 +390,7 @@ $("zin").onclick = () => setZoom(doc.zoom * 1.6);
 $("zout").onclick = () => setZoom(doc.zoom / 1.6);
 $("zfit").onclick = () => { doc.zoom = 1; renderPdfPage(); };
 addEventListener("keydown", e => {
-  if ($("docv").hidden) return;
+  if ($("docv").hidden || doc.xls) return;
   if (e.key === "ArrowRight" || e.key === "PageDown") { if (doc.page < doc.pdf.numPages) goPage(doc.page + 1); }
   else if (e.key === "ArrowLeft" || e.key === "PageUp") { if (doc.page > 1) goPage(doc.page - 1); }
 });
@@ -432,7 +443,7 @@ addEventListener("keydown", e => {
   };
   wrap.addEventListener("pointerup", end); wrap.addEventListener("pointercancel", end);
   wrap.style.touchAction = "pan-x pan-y";
-  let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { if (!$("docv").hidden && doc.pdf) renderPdfPage(); }, 200); });
+  let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { if (!$("docv").hidden && doc.pdf && !doc.xls) renderPdfPage(); }, 200); });
 }
 
 // ------------------------------------------------------------------ 3D viewer
