@@ -89,7 +89,7 @@
    "note": "The Distributor Bill of Materials for the basement extension (stock forms + 5 % waste, every form and accessory with a blank rate card for your own sale prices - no material prices from us).",
    "zip": {
     "file": "downloads/ES26-088 Quotation.zip",
-    "bytes": 64413,
+    "bytes": 10670,
     "count": 1
    },
    "docs": [
@@ -97,9 +97,8 @@
      "id": "ES26-088-QS-01",
      "title": "Distributor BOM - Nudura ICF kit with your rate card (Excel)",
      "file": "downloads/ES26-088 Distributor BOM - Basement Extension.xlsx",
-     "pages": 4,
      "thumb": "thumbs/ES26-088-QS-01.png",
-     "bytes": 138688,
+     "bytes": 11298,
      "number": "ES26-088-QS-01",
      "kind": "xlsx",
      "preview": "xls/bom.html",
@@ -165,8 +164,8 @@
  "toggles": [],
  "download_all": {
   "file": "downloads/ES26-088 Basement extension, Badgers Hollow, Alderley Edge - Quotation.zip",
-  "bytes": 210563,
-  "count": 5,
+  "bytes": 146164,
+  "count": 4,
   "title": "Download everything"
  }
 }
